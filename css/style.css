@@ -1,0 +1,27 @@
+body {
+  margin: 0; }
+
+header {
+  background-color: #013501;
+  min-height: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+h1 {
+  color: gold; }
+
+h2 {
+  color: #013501; }
+
+#dBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%; }
+
+#dBtns > input {
+  width: 20%;
+  color: #013501;
+  background-color: #82db82; }
