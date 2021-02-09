@@ -1,0 +1,22 @@
+{
+  "name": "tiendaapi",
+  "version": "1.0.0",
+  "description": "una página web que se encargue de mostrar, añadir y consultar tiendas usando la API de tiendas creada para DSW.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrishMikey/TiendaApi.git"
+  },
+  "author": "Michael Geraghty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrishMikey/TiendaApi/issues"
+  },
+  "homepage": "https://github.com/IrishMikey/TiendaApi#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
