@@ -1,7 +1,7 @@
 {
-  "name": "tiendaapi",
+  "name": "tiendapi",
   "version": "1.0.0",
-  "description": "una página web que se encargue de mostrar, añadir y consultar tiendas usando la API de tiendas creada para DSW.",
+  "description": "Una página web que se encargue de mostrar, añadir y consultar tiendas usando la API de tiendas creada para DSW.",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

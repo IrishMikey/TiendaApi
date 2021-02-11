@@ -7,6 +7,7 @@ function hideBtns(){
 dBtns.style.display = "none";
 img.style.display = "block"
 }
+
 [...btns].forEach(btn => {
     btn.addEventListener("click", () => hideBtns());
 });

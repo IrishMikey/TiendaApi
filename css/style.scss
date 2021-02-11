@@ -4,6 +4,30 @@ $secondary-color: rgb(224, 192, 7);
 $tertiary-color: rgb(193, 252, 193);
 $hoverColor: rgb(166, 223, 166);
 
+@mixin buttonStyle($type) {
+  margin: 5px;
+
+  outline: none;
+  border: 1px solid $primary-color;
+  border-radius: 50px;
+  @if $type == light {
+    background-color: $tertiary-color;
+    color: $primary-color;
+  } @else if $type == dark {
+    background-color: $hoverColor;
+  } @else if $type == darkest {
+    background-color: $primary-color;
+    color: $tertiary-color;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: 0;
   font-family: $font-stack;
@@ -13,13 +37,13 @@ header {
   color: $secondary-color;
   display: flex;
   justify-content: center;
+  height: 10%r;
 }
 main {
   display: flex;
-  flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 83%;
 }
 #dBtns {
   color: $primary-color;
@@ -32,22 +56,17 @@ main {
     justify-content: space-around;
 
     input {
-      margin: 5px;
-      background-color: $tertiary-color;
-      color: $primary-color;
-      outline: none;
-      border: 1px solid $primary-color;
-      border-radius: 50px;
+      @include buttonStyle(light);
     }
     input:hover {
-      background-color: $hoverColor;
+      @include buttonStyle(dark);
     }
     input:active {
-      background-color: $primary-color;
-      color: $tertiary-color;
+      @include buttonStyle(darkest);
     }
   }
 }
 img {
   display: none;
+  animation: rotation 1.5s infinite linear;
 }
