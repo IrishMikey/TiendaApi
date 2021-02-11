@@ -39,12 +39,15 @@ main {
       border: 1px solid $primary-color;
       border-radius: 50px;
     }
-    input:hover{
-        background-color: $hoverColor;
+    input:hover {
+      background-color: $hoverColor;
     }
-    input:active{
-        background-color: $primary-color;
-        color: $tertiary-color;
+    input:active {
+      background-color: $primary-color;
+      color: $tertiary-color;
     }
   }
+}
+img {
+  display: none;
 }

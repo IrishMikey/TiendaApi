@@ -35,3 +35,6 @@ main {
     #dBtns div input:active {
       background-color: #034e03;
       color: #c1fcc1; }
+
+img {
+  display: none; }
