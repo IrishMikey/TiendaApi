@@ -1,28 +1,50 @@
-body{
-    margin: 0;
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(3, 78, 3);
+$secondary-color: rgb(224, 192, 7);
+$tertiary-color: rgb(193, 252, 193);
+$hoverColor: rgb(166, 223, 166);
+
+body {
+  margin: 0;
+  font-family: $font-stack;
 }
-header{
-    background-color: rgb(1, 53, 1);
-    min-height: 5%;
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#dBtns {
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+
+  div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-h1{
-    color: gold;
-}
-h2{
-    color: rgb(1, 53, 1);
-}
-#dBtns{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-}
-#dBtns > input{
-    width: 20%;
-    color: rgb(1, 53, 1);
-    background-color: rgb(130, 219, 130);
+    justify-content: space-around;
+
+    input {
+      margin: 5px;
+      background-color: $tertiary-color;
+      color: $primary-color;
+      outline: none;
+      border: 1px solid $primary-color;
+      border-radius: 50px;
+    }
+    input:hover{
+        background-color: $hoverColor;
+    }
+    input:active{
+        background-color: $primary-color;
+        color: $tertiary-color;
+    }
+  }
 }
