@@ -21,22 +21,23 @@ var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', gulp.series(['sass'], function() {
 
     browserSync.init({
-        server: "./app"
+        server: "./"
     });
 
-    gulp.watch("app/scss/*.scss", ['sass']);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
-});
+    gulp.watch("./css/*.scss", gulp.series(['sass']));
+    gulp.watch("./*.html").on('change', browserSync.reload);
+}));
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("app/scss/*.scss")
+    return gulp.src("./css/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series(['serve']));
+//exports.default = serve;
