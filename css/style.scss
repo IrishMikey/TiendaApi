@@ -70,3 +70,16 @@ img {
   display: none;
   animation: rotation 1.5s infinite linear;
 }
+#dTiendas{
+  display: none;
+  height: auto;
+  color: $primary-color;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+ .dCards{
+   border: $primary-color;
+   border-radius: 5px;
+ }
+}

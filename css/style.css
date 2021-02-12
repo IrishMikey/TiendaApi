@@ -53,3 +53,14 @@ main {
 img {
   display: none;
   animation: rotation 1.5s infinite linear; }
+
+#dTiendas {
+  display: none;
+  height: auto;
+  color: #034e03;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #dTiendas .dCards {
+    border: #034e03;
+    border-radius: 5px; }
