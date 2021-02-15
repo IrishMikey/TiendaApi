@@ -5,6 +5,7 @@
     transform: rotate(360deg); } }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: Helvetica, sans-serif; }
 
@@ -19,7 +20,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 83%; }
+  height: 100%; }
 
 #dBtns {
   color: #034e03;
@@ -56,11 +57,16 @@ img {
 
 #dTiendas {
   display: none;
-  height: auto;
+  height: 100%;
   color: #034e03;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  #dTiendas .dCards {
-    border: #034e03;
-    border-radius: 5px; }
+  min-width: 66%; }
+
+.dCards {
+  display: flex;
+  flex-direction: column;
+  border: #034e03 solid 2px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  min-height: 10%; }

@@ -29,6 +29,7 @@ $hoverColor: rgb(166, 223, 166);
   }
 }
 body {
+  height: 100%;
   margin: 0;
   font-family: $font-stack;
 }
@@ -43,7 +44,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 83%;
+  height: 100%;
 }
 #dBtns {
   color: $primary-color;
@@ -72,14 +73,18 @@ img {
 }
 #dTiendas{
   display: none;
-  height: auto;
+  height: 100%;
   color: $primary-color;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-width: 66%;
 
- .dCards{
-   border: $primary-color;
-   border-radius: 5px;
- }
+}
+.dCards{
+  display: flex;
+  flex-direction: column;
+  border: $primary-color solid 2px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  min-height: 10%;
 }

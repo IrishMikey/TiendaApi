@@ -10,22 +10,22 @@ function hideLoader() {
 export function makeTienda(tiendaDatos) {
 
     tiendaDatos.forEach(tiendaDato => {
-        dTiendas.appendChild(makeCardElements(tiendaDato.nombreTienda, tiendaDato.localidad, tiendaDato.telefono));
+        dTiendas.appendChild(makeCardElements(tiendaDato.nombreTienda, tiendaDato.direccion,tiendaDato.localidad, tiendaDato.telefono));
         
     });
 }
 
-function makeCardElements(cName, cLocation, cNum) {
+function makeCardElements(cName, cDireccion, cLocation, cNum) {
     var nameEle = document.createElement("h2");
     var nameTxt = document.createTextNode(cName);
     nameEle.appendChild(nameTxt);
 
     var locationEle = document.createElement("span");
-    var locationTxt = document.createTextNode(cLocation);
+    var locationTxt = document.createTextNode(cDireccion + " " + cLocation);
     locationEle.appendChild(locationTxt);
 
     var numEle = document.createElement("span");
-    var numTxt = document.createTextNode(cName);
+    var numTxt = document.createTextNode(cNum);
     numEle.appendChild(numTxt);
 
     var cardEle = document.createElement("div");
