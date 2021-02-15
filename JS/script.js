@@ -1,4 +1,4 @@
-import { tiendaXhr } from "./apis.js";
+import { tiendaXhr, tiendaJQuery, tiendaFetch } from "./apis.js";
 var btns = document.getElementsByTagName("input");
 var dBtns = document.getElementById("dBtns");
 var img = document.getElementsByTagName("img")[0];
@@ -12,9 +12,9 @@ function setReqType(type) {
     if (type == "XHR") {
         tiendaXhr();
     } else if (type == "Fetch") {
-        console.log();
-    } else if (type == "JQuery") {
-        console.log();
+        tiendaFetch();
+    } else if (type == "jQuery") {
+        tiendaJQuery();
     }
 }
 

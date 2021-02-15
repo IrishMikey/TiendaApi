@@ -8,7 +8,7 @@ function hideLoader() {
 
 
 export function makeTienda(tiendaDatos) {
-
+console.log(tiendaDatos)
     tiendaDatos.forEach(tiendaDato => {
         dTiendas.appendChild(makeCardElements(tiendaDato.nombreTienda, tiendaDato.direccion,tiendaDato.localidad, tiendaDato.telefono));
         
