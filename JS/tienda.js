@@ -1,5 +1,6 @@
 var img = document.getElementsByTagName("img")[0];
 var dTiendas = document.getElementById("dTiendas");
+var searchNav = document.getElementById("searchNav");
 
 function hideLoader() {
     img.style.display = "none";
@@ -8,7 +9,7 @@ function hideLoader() {
 
 
 export function makeTienda(tiendaDatos) {
-console.log(tiendaDatos)
+    showSearchNav();
     tiendaDatos.forEach(tiendaDato => {
         dTiendas.appendChild(makeCardElements(tiendaDato.nombreTienda, tiendaDato.direccion,tiendaDato.localidad, tiendaDato.telefono));
         
@@ -37,4 +38,9 @@ function makeCardElements(cName, cDireccion, cLocation, cNum) {
 
     return cardEle;
 
+}
+
+function showSearchNav(){
+    console.log("ss")
+    searchNav.style.display = "flex";
 }

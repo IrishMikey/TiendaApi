@@ -25,3 +25,4 @@ function setReqType(type) {
         setReqType(btn.value);
     });
 });
+document.getElementsByTagName("h1")[0].addEventListener("click", () => location.reload());
