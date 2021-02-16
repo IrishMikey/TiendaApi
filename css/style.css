@@ -65,6 +65,9 @@ img {
   justify-content: center;
   align-items: center; }
 
+#dSBtns {
+  display: flex; }
+
 .dCards {
   display: flex;
   flex-direction: column;
@@ -75,7 +78,7 @@ img {
 
 #searchNav {
   display: none;
-  justify-content: space-around;
+  justify-content: space-between;
   border: solid blue 2px; }
   #searchNav a {
     color: #034e03;
@@ -88,3 +91,28 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+#createNav h2 {
+  color: #034e03; }
+
+form {
+  border-radius: 5px;
+  border: solid 2px #c1fcc1; }
+
+.fCon {
+  display: flex;
+  justify-content: space-between; }
+
+.fEleC {
+  display: flex;
+  flex-direction: column; }
+
+.fEle {
+  outline: none;
+  border-radius: 5px; }
+
+#fSubmit {
+  background-color: #c1fcc1;
+  color: #034e03;
+  outline: none;
+  border-radius: 5px; }

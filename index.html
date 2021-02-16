@@ -22,11 +22,40 @@
                     <input type="button" name="ajaxMethods" id="btnJQuery" value="jQuery">
                 </div>
             </div>
-            <img src="./img/loadingsvg.svg" alt="Spinner" id="spinner" >
+            <img src="./img/loadingsvg.svg" alt="Spinner" id="spinner">
             <div id=searchNav>
                 <a href="#">Nueva Tienda</a>
-                <input type="text" placeholder="ID de Tienda: ">
-                <input type="button" id="sBtn">
+                <div id="dSBtns">
+                    <input type="text" placeholder="ID de Tienda: ">
+                    <input type="button" id="sBtn">
+                </div>
+
+            </div>
+            <div id="createNav">
+                <form action="#">
+                    <h2>Nueva Empresa</h2>
+                    <div class="fCon">
+                        <div class="fEleC">
+                            <label for="nombre" >Nombre</label>
+                            <input type="text" name="nombre" id="nombre" class="fEle" placeholder="Nombre de la empresa">
+                        </div>
+                        <div class="fEleC">
+                            <label for="addr">Dirección</label>
+                            <input type="text" name="addr" class="fEle" placeholder="Dirección de la empresa">
+                        </div>
+                    </div>
+                    <div class="fCon">
+                        <div class="fEleC">
+                            <label for="">Localidad</label>
+                            <input type="text" name="local"  class="fEle" placeholder="Localidad de la empresa">
+                        </div>
+                        <div class="fEleC">
+                            <label for="num">Teléfono</label>
+                            <input type="text" name="num"  class="fEle" placeholder="Teléfono de la empresa">
+                        </div>
+                    </div>
+                    <input type="submit" name="" id="fSubmit" value="Añadir Tienda">
+                </form>
             </div>
             <div id="dTiendas"></div>
         </div>

@@ -82,6 +82,9 @@ img {
   align-items: center;
 
 }
+#dSBtns{
+  display: flex;
+}
 .dCards {
   display: flex;
   flex-direction: column;
@@ -92,7 +95,7 @@ img {
 }
 #searchNav {
   display: none;
-  justify-content: space-around;
+  justify-content: space-between;
   border: solid blue 2px;
   a {
     color: $primary-color;
@@ -106,4 +109,33 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#createNav{
+
+  h2{
+    color: $primary-color;
+  }
+}
+form{
+  border-radius:5px;
+  border: solid 2px $tertiary-color;
+}
+.fCon{
+  display: flex;
+  justify-content: space-between;
+}
+.fEleC{
+  display: flex;
+  flex-direction: column;
+  
+}
+.fEle{
+  outline: none;
+  border-radius:5px;
+}
+#fSubmit{
+  background-color: $tertiary-color;
+  color: $primary-color;
+  outline: none;
+  border-radius:5px;
 }
