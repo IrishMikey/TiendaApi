@@ -1,11 +1,11 @@
 import { tiendaXhr, tiendaJQuery, tiendaFetch } from "./apis.js";
-var btns = document.getElementsByTagName("input");
+var btns = document.getElementsByName("ajaxMethods");
 var dBtns = document.getElementById("dBtns");
-var img = document.getElementsByTagName("img")[0];
+var spinner = document.getElementById("spinner");
 
 function hideBtns() {
     dBtns.style.display = "none";
-    img.style.display = "block";
+    spinner.style.display = "block";
 }
 
 function setReqType(type) {

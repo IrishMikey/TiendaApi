@@ -19,9 +19,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%; }
+  align-items: center; }
 
 #dBtns {
   color: #034e03;
@@ -63,14 +61,17 @@ img {
   flex-direction: column;
   min-width: 66%; }
 
+#dMain {
+  justify-content: center;
+  align-items: center; }
+
 .dCards {
   display: flex;
   flex-direction: column;
   border: #034e03 solid 2px;
   border-radius: 5px;
   padding: 5px;
-  margin: 5px;
-  min-height: 10%; }
+  margin: 5px; }
 
 #searchNav {
   display: none;

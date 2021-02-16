@@ -1,5 +1,6 @@
 import { makeTienda } from "./tienda.js";
 
+const reqURL = "https://webapp-210130211157.azurewebsites.net/webresources/mitienda"
 function createCORSRequest(method, url) {
     var xhrReq = new XMLHttpRequest();
     if ("withCredentials" in xhrReq) {
@@ -10,7 +11,7 @@ function createCORSRequest(method, url) {
     return xhrReq;
 }
 export function tiendaXhr() {
-    var request = createCORSRequest("get", "https://webapp-210130211157.azurewebsites.net/webresources/mitienda");
+    var request = createCORSRequest("get", reqURL);
     var data = "";
     if (request) {
         request.onload = function () {
@@ -32,7 +33,7 @@ export function tiendaXhr() {
 
 export function tiendaJQuery() {
     $.ajax({
-        url: 'https://webapp-210130211157.azurewebsites.net/webresources/mitienda', //URL de la petición
+        url: reqURL, //URL de la petición
         type: 'GET', //tipo de la petición: POST o GET
         dataType: 'json', //tipo de dato que se espera
         success: function (json) { //función a ejecutar si es satisfactoria
@@ -51,14 +52,12 @@ export function tiendaJQuery() {
 
 export async function tiendaFetch() {
 
-    
-    var tiendaUrl = await fetch("https://webapp-210130211157.azurewebsites.net/webresources/mitienda")
+    var tiendaUrl = await fetch(reqURL)
         .then(response => {
             return response.text()
         })
         .then(data => {
-            var tiendaObj = JSON.parse(data);
-            return tiendaObj;
+            return JSON.parse(data);
         })
         .catch(error => {
             console.log("Se ha producido un error"+error);
